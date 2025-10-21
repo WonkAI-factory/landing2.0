@@ -4,7 +4,7 @@ const projects = [
   {
     id: 1,
     name: 'Enchufando',
-    description: 'Marketplace inteligente que conecta usuarios con proveedores eléctricos.',
+    description: 'Sitio web para la empresa Enchufando.',
     url: 'https://enchufando.com',
     image: '/api/placeholder/400/300',
     technologies: ['React', 'Node.js', 'AI'],

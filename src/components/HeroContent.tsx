@@ -1,11 +1,8 @@
 import { motion } from 'framer-motion'
-import HeroAnimation from './HeroAnimation'
 
 export default function HeroContent() {
   return (
-    <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-      {/* Text Content */}
-      <div className="space-y-8">
+    <div className="text-center max-w-5xl mx-auto">
       {/* Logo/Brand */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -25,11 +22,11 @@ export default function HeroContent() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-display font-bold leading-tight"
+        className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-display font-bold leading-tight mb-8"
       >
-        Construimos software que{' '}
+        Transformamos tu{' '}
         <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-          impulsa el futuro
+          idea en realidad digital
         </span>
       </motion.h2>
 
@@ -38,18 +35,57 @@ export default function HeroContent() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="text-lg sm:text-xl lg:text-2xl text-text/80 max-w-4xl mx-auto leading-relaxed"
+        className="text-lg sm:text-xl lg:text-2xl text-text/80 max-w-4xl mx-auto leading-relaxed mb-12"
       >
-        Wonkai es una software factory enfocada en crear productos digitales escalables, 
-        con inteligencia y diseño.
+        Desarrollamos software que impulsa el crecimiento de tu negocio. 
+        Desde aplicaciones web hasta soluciones con inteligencia artificial, 
+        creamos productos que generan resultados reales.
       </motion.p>
+
+      {/* Key Benefits */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+        className="grid md:grid-cols-3 gap-6 mb-12"
+      >
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+          <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-4 mx-auto">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 className="text-lg font-semibold mb-2">Desarrollo ágil</h3>
+          <p className="text-text/70 text-sm">Entregamos resultados en semanas, no meses</p>
+        </div>
+        
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+          <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-4 mx-auto">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 className="text-lg font-semibold mb-2">Calidad garantizada</h3>
+          <p className="text-text/70 text-sm">Código limpio y mantenible para el futuro</p>
+        </div>
+        
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+          <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-4 mx-auto">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+            </svg>
+          </div>
+          <h3 className="text-lg font-semibold mb-2">ROI comprobado</h3>
+          <p className="text-text/70 text-sm">Inversión que se paga sola con resultados</p>
+        </div>
+      </motion.div>
 
       {/* CTA Buttons */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-        className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
+        transition={{ duration: 0.8, delay: 0.8 }}
+        className="flex flex-col sm:flex-row gap-4 justify-center items-center"
       >
         <motion.a
           href="#proyectos"
@@ -57,7 +93,7 @@ export default function HeroContent() {
           whileTap={{ scale: 0.95 }}
           className="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-primary/25 transition-all duration-300"
         >
-          Ver proyectos
+          Ver casos de éxito
         </motion.a>
         
         <motion.a
@@ -66,67 +102,8 @@ export default function HeroContent() {
           whileTap={{ scale: 0.95 }}
           className="border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary hover:text-white transition-all duration-300"
         >
-          Contactanos
+          Consulta gratuita
         </motion.a>
-      </motion.div>
-
-      {/* Tech Stack Icons */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        className="pt-12"
-      >
-        <p className="text-text/60 mb-6">Tecnologías que dominamos</p>
-        <div className="flex flex-wrap justify-center gap-6 text-2xl">
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
-            <span className="text-primary">React</span>
-          </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
-            <span className="text-secondary">Node.js</span>
-          </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
-            <span className="text-primary">AI/ML</span>
-          </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
-            <span className="text-secondary">Mobile</span>
-          </div>
-        </div>
-      </motion.div>
-      </div>
-
-      {/* 3D Animation - Desktop */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="hidden lg:block"
-      >
-        <HeroAnimation />
-      </motion.div>
-
-      {/* Mobile Animation - Simplified */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="lg:hidden mt-8"
-      >
-        <div className="relative w-full h-64 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl border border-white/10 overflow-hidden">
-          {/* Animated gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-secondary/30 to-primary/30 animate-gradient"></div>
-          
-          {/* Floating geometric shapes */}
-          <div className="absolute top-1/4 left-1/4 w-8 h-8 bg-primary/40 rounded-lg rotate-45 animate-float"></div>
-          <div className="absolute top-1/3 right-1/4 w-6 h-6 bg-secondary/40 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute bottom-1/3 left-1/3 w-4 h-4 bg-primary/60 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute bottom-1/4 right-1/3 w-10 h-10 bg-secondary/30 rounded-lg rotate-12 animate-float" style={{ animationDelay: '0.5s' }}></div>
-          
-          {/* Central focus element */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl animate-pulse shadow-lg shadow-primary/25"></div>
-          </div>
-        </div>
       </motion.div>
     </div>
   )
