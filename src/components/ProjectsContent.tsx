@@ -12,12 +12,39 @@ const projects = [
   },
   {
     id: 2,
-    name: 'Próximamente',
-    description: 'Nuevo proyecto revolucionario en desarrollo.',
-    url: '#',
+    name: 'LR Consultora',
+    description: 'Landing page profesional para consultora en seguridad e higiene. Diseño moderno y funcional que comunica eficazmente los servicios de la empresa.',
+    url: 'http://lrconsultora.com.ar',
     image: '/api/placeholder/400/300',
-    technologies: ['AI/ML', 'Mobile', 'Web'],
-    status: 'coming-soon'
+    technologies: ['Web', 'Responsive', 'SEO'],
+    status: 'live'
+  },
+  {
+    id: 3,
+    name: 'Chrisevel Matafuegos',
+    description: 'Sitio web corporativo para empresa de matafuegos. Plataforma que presenta productos y servicios con navegación intuitiva.',
+    url: 'https://www.chrisevelmatafuegos.com',
+    image: '/api/placeholder/400/300',
+    technologies: ['Web', 'UX/UI', 'Performance'],
+    status: 'live'
+  },
+  {
+    id: 4,
+    name: 'Consultora Punto de Partida',
+    description: 'Landing page elegante para consultora de psicólogas. Diseño que transmite confianza y profesionalismo.',
+    url: 'https://www.consultorapuntodepartida.com.ar',
+    image: '/api/placeholder/400/300',
+    technologies: ['Web', 'Design', 'Accessibility'],
+    status: 'live'
+  },
+  {
+    id: 5,
+    name: 'Consultora Bule',
+    description: 'Sitio web profesional para consultora. Plataforma moderna que presenta servicios y conecta con clientes de manera eficiente.',
+    url: 'https://www.consultorabule.com.ar',
+    image: '/api/placeholder/400/300',
+    technologies: ['Web', 'Responsive', 'SEO'],
+    status: 'live'
   }
 ]
 
@@ -52,9 +79,9 @@ export default function ProjectsContent() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="group"
+            className="group h-full"
           >
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover:border-primary/50 transition-all duration-300">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover:border-primary/50 transition-all duration-300 h-full flex flex-col">
               {/* Project Image */}
               <div className="relative h-48 bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
                 {project.status === 'live' ? (
@@ -96,12 +123,12 @@ export default function ProjectsContent() {
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                   {project.name}
                 </h3>
                 
-                <p className="text-text/80 mb-4 leading-relaxed">
+                <p className="text-text/80 mb-4 leading-relaxed flex-grow">
                   {project.description}
                 </p>
 
@@ -125,7 +152,7 @@ export default function ProjectsContent() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
+                    className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 mt-auto"
                   >
                     <span>Ver proyecto</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -133,7 +160,7 @@ export default function ProjectsContent() {
                     </svg>
                   </motion.a>
                 ) : (
-                  <div className="inline-flex items-center space-x-2 bg-white/10 text-text/60 px-6 py-3 rounded-full font-medium border border-white/20">
+                  <div className="inline-flex items-center justify-center space-x-2 bg-white/10 text-text/60 px-6 py-3 rounded-full font-medium border border-white/20 mt-auto">
                     <span>Próximamente</span>
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
@@ -152,16 +179,17 @@ export default function ProjectsContent() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
         viewport={{ once: true }}
-        className="text-center pt-8"
+        className="text-center pt-8 relative z-10"
       >
         <p className="text-text/80 mb-6">
           ¿Tenés un proyecto en mente? Hablemos sobre cómo podemos ayudarte.
         </p>
         <motion.a
-          href="#contacto"
+          href="mailto:wonkai.factory@gmail.com?subject=Consulta sobre proyecto"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="inline-flex items-center space-x-2 border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300"
+          className="inline-flex items-center space-x-2 border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300 relative z-20 cursor-pointer pointer-events-auto"
+          style={{ pointerEvents: 'auto' }}
         >
           <span>Iniciar proyecto</span>
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

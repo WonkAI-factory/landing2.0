@@ -9,7 +9,10 @@ interface CubeletProps {
   x: number
   y: number
   z: number
-  materialFaces: {
+  originalX: number
+  originalY: number
+  originalZ: number
+  materialFaces?: {
     right: boolean
     left: boolean
     top: boolean
@@ -260,7 +263,7 @@ export default function Cube3D() {
       <pointLight position={[-5, 5, 3]} intensity={0.9} color="#4da6ff" />
       <pointLight position={[3, -5, 3]} intensity={0.7} color="#ff6b6b" />
 
-      <group ref={groupRef} scale={1}>
+      <group ref={groupRef} scale={1.15}>
         <RubiksCube isDragging={isDragging.current} />
       </group>
     </>

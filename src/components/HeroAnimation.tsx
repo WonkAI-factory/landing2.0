@@ -22,7 +22,7 @@ export default function HeroAnimation() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="relative w-full h-full min-h-[400px] lg:min-h-[600px]"
+        className="relative w-full h-[450px] lg:h-[550px] xl:h-[650px]"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/10 to-primary/20 rounded-2xl border border-white/10">
           <div className="absolute inset-0 flex items-center justify-center">
@@ -38,7 +38,7 @@ export default function HeroAnimation() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="relative w-full h-[500px] lg:h-[600px]"
+      className="relative w-full h-[450px] lg:h-[550px] xl:h-[650px]"
     >
       {/* 3D Canvas */}
       <Canvas
