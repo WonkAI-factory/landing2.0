@@ -60,7 +60,7 @@ export default function ServicesContent() {
       >
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6">
           Soluciones que{' '}
-          <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
             generan resultados
           </span>
         </h2>
@@ -81,15 +81,15 @@ export default function ServicesContent() {
             whileHover={{ y: -5 }}
             className="group"
           >
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 h-full hover:border-primary/50 transition-all duration-300 hover:bg-white/10">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 h-full hover:border-gray-600/50 transition-all duration-300 hover:bg-white/10">
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-gray-700/20 to-gray-600/20 rounded-xl flex items-center justify-center text-gray-300 mb-6 group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
 
               {/* Content */}
               <div className="space-y-4">
-                <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold group-hover:text-gray-300 transition-colors">
                   {service.title}
                 </h3>
                 
@@ -108,7 +108,7 @@ export default function ServicesContent() {
                       viewport={{ once: true }}
                       className="flex items-center space-x-2"
                     >
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
                       <span className="text-sm text-text/70 font-medium">{benefit}</span>
                     </motion.div>
                   ))}
@@ -125,7 +125,7 @@ export default function ServicesContent() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
         viewport={{ once: true }}
-        className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 lg:p-12 border border-white/10"
+        className="bg-gradient-to-r from-gray-800/20 to-gray-700/20 rounded-2xl p-8 lg:p-12 border border-white/10"
       >
         <div className="text-center mb-8">
           <h3 className="text-2xl lg:text-3xl font-bold mb-4">

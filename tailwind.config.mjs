@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#8B5CF6',
-        secondary: '#22D3EE',
-        background: '#0B0B14',
-        text: '#E5E5E5'
+        primary: '#1F2937',
+        secondary: '#374151',
+        background: '#000000',
+        text: '#F9FAFB'
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -24,8 +24,8 @@ export default {
           '50%': { transform: 'translateY(-20px)' }
         },
         glow: {
-          '0%': { boxShadow: '0 0 20px #8B5CF6' },
-          '100%': { boxShadow: '0 0 40px #8B5CF6, 0 0 60px #8B5CF6' }
+          '0%': { boxShadow: '0 0 20px #1F2937' },
+          '100%': { boxShadow: '0 0 40px #1F2937, 0 0 60px #1F2937' }
         },
         gradient: {
           '0%, 100%': { backgroundPosition: '0% 50%' },

@@ -88,7 +88,7 @@ export default function BenefitsContent() {
       >
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6">
           Resultados que{' '}
-          <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
             hablan por sí solos
           </span>
         </h2>
@@ -109,15 +109,15 @@ export default function BenefitsContent() {
             whileHover={{ y: -5 }}
             className="group"
           >
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 h-full hover:border-primary/50 transition-all duration-300 hover:bg-white/10 text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 h-full hover:border-gray-600/50 transition-all duration-300 hover:bg-white/10 text-center">
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center text-primary mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-gray-700/20 to-gray-600/20 rounded-xl flex items-center justify-center text-gray-300 mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                 {benefit.icon}
               </div>
 
               {/* Metric */}
               <div className="mb-4">
-                <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
                   {benefit.metric}
                 </div>
                 <div className="text-sm text-text/70 font-medium">
@@ -127,7 +127,7 @@ export default function BenefitsContent() {
 
               {/* Content */}
               <div className="space-y-3">
-                <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold group-hover:text-gray-300 transition-colors">
                   {benefit.title}
                 </h3>
                 
@@ -146,7 +146,7 @@ export default function BenefitsContent() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
         viewport={{ once: true }}
-        className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 lg:p-12 border border-white/10"
+        className="bg-gradient-to-r from-gray-800/20 to-gray-700/20 rounded-2xl p-8 lg:p-12 border border-white/10"
       >
         <div className="text-center mb-12">
           <h3 className="text-2xl lg:text-3xl font-bold mb-4">
@@ -190,7 +190,7 @@ export default function BenefitsContent() {
         viewport={{ once: true }}
         className="text-center"
       >
-        <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl p-8 lg:p-12 border border-primary/30">
+        <div className="bg-gradient-to-r from-gray-800/30 to-gray-700/30 rounded-2xl p-8 lg:p-12 border border-gray-600/30">
           <h3 className="text-2xl lg:text-3xl font-bold mb-4">
             ¿Listo para ver estos resultados en tu negocio?
           </h3>
@@ -201,7 +201,7 @@ export default function BenefitsContent() {
             href="#contacto"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-primary/25 transition-all duration-300"
+            className="inline-block bg-gradient-to-r from-gray-800 to-gray-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-gray-800/25 transition-all duration-300"
           >
             Consulta gratuita
           </motion.a>
